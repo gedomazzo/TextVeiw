@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btn;
     TextView tv;
-
+    int counter = 0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -28,8 +28,9 @@ public class MainActivity extends AppCompatActivity {
     public void OnPush(View view) {
         btn = findViewById(R.id.btn);
         tv = findViewById(R.id.tv);
+        counter ++;
+        tv.setText("This is a click number: " + counter);
 
-        tv.setText("Oh, yea, I’ve been clicked!");
 
 
 
