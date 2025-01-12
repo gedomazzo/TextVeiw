@@ -16,7 +16,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button btn;
     TextView tv;
-    int counter = 0;
+    int counter = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,12 +29,12 @@ public class MainActivity extends AppCompatActivity {
         btn = findViewById(R.id.btn);
         tv = findViewById(R.id.tv);
 
-        if (counter < 6) {
+        if (counter % 7 == 0) {
+            tv.setText("BOOM!");
             counter++;
-            tv.setText("This is a click number: " + counter);
         } else {
-            tv.setText("Enough to click. Go to new start!");
-            counter = 0;
+            tv.setText("This is a click number: " + counter);
+            counter++;
         }
 
 
