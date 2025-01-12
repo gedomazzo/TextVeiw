@@ -28,10 +28,14 @@ public class MainActivity extends AppCompatActivity {
     public void OnPush(View view) {
         btn = findViewById(R.id.btn);
         tv = findViewById(R.id.tv);
-        counter ++;
-        tv.setText("This is a click number: " + counter);
 
-
+        if (counter < 6) {
+            counter++;
+            tv.setText("This is a click number: " + counter);
+        } else {
+            tv.setText("Enough to click. Go to new start!");
+            counter = 0;
+        }
 
 
     }
